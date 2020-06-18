@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息管理</title>
+    <style>
+        fieldset{ width: 400px; margin:  auto;}
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>数据管理</legend>
+        <table>
+            <tr>
+                <td>姓名</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>性别</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>年龄</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>备注</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button>保存</button>
+                </td>
+                
+            </tr>
+        </table>
+        <hr>
+        根据姓名进行搜索：
+        <input type="text">
+        <button>搜索</button>
+        <hr>
+        <div id="result"></div>
+    </fieldset> 
+</body>
+<script>
+    //获取标签
+    var inputs = document.getElementsByTagName('input');
+    var btns = document.getElementsByTagName('button');
+    var result = document.getElementById('result');
+
+
+    //实现按钮保存
+    btns[0].onclick = function(){
+        var obj = new Object();
+        obj.name = inputs[0].value;
+        obj.sex = inputs[1].value;
+        obj.age = inputs[2].value;
+        obj.info = inputs[3].value;
+
+        var objStr = JSON.stringify(obj);
+        localStorage.setItem(obj.name,objStr);
+        
+        for(var i =0; i<inputs.length;i++){
+            inputs[i].value='';
+        }
+        alert('保存成功');
+    }
+    //搜索
+    btns[1].onclick = function(){
+        var value = localStorage.getItem(inputs[4].value);
+        var obj = JSON.parse(value);
+        var str ="姓名:"+obj.name+"</br>"+"性别:"+obj.sex +"</br>"+"年龄："+obj.age+"</br>";
+        result.innerHTML = str;
+    }
+</script>
+</html>

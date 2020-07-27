@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link href="style.css" rel="stylesheet" type="text/css"> -->
+    <script src="../jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body bgcolor="#fffaf1">
+    <!-- <div class="frame_result"></div> -->
+    <div class="userlist">
+        <table id = "ut">
+               <tr >
+                    <th>系统编码</th>
+                    <th>物料名称</th>
+                    <th>规格</th>
+                    <!-- <th style="display: none">参数1</th>
+                    <th style="display: none">参数2</th>
+                    <th style="display: none">参数3</th> -->
+                    <th>单位名称</th>
+                    <th>1-3个月</th>
+                    <th>3-6个月</th>
+                    <th>6-12个月</th>
+                    <th>12个月以上</th>
+                    <th>单价</th>
+              </tr>
+      </table>
+</div>
+</body>
+<script type="text/javascript">
+    var btn = window.parent.document.getElementById('tb');
+    var res1 ='';
+    var res2 ='';
+    btn.onclick = function(){
+        res1 = window.parent.document.getElementById('tb1').value;
+        res2 = window.parent.document.getElementById('tb2').value;
+    
+
+ 
+        mtr = document.getElementById("ut") ;
+
+        //使用ajax加载csv文件的数据
+        $.ajax({
+                url: "../data/铜箔.csv",
+                success: function(result) {
+                frag = document.createDocumentFragment();
+
+                // 对csv文件的数据先以行分割
+                userList = result.split("\n");
+                
+                // alert(res1);
+                // alert(res2);
+              // 我们在对每一行以逗号作分割
+                for(i=1;i<userList.length;i++){
+                userary = userList[i].split(",");
+                tr = document.createElement("tr");
+
+                if(res1!=''&&res1!=userary[4]&&res1!=userary[3]){
+                    continue;
+                    
+                }else{
+                  if(res2!=''&&res2!=userary[4]&&res2!=userary[3]){
+                    continue;
+                    
+                  }
+                  
+                }
+                    
+                  // 对每行的内容遍历到td标签去
+                    for(j = 0;j<userary.length;j++){
+                        td = document.createElement("td");
+                        if(j<3||j>4){
+                          td.append(userary[j]);
+                          tr.appendChild(td);
+                        }
+                } 
+              frag.appendChild(tr);
+            }
+            if(frag==''){
+              alert('没有数据');
+            }
+        // 加载到web页面
+        mtr.appendChild(frag);
+
+        }
+    });
+    }
+</script>
+</html>
+     

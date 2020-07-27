@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>磁性元件设计软件</title>
+    <link type="text/css" href="style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="top">
+        <p class="text_heading">磁性元件设计软件</p>
+    </div>
+    <div class="heading">
+
+        <ul>
+            <li class="current">硅钢片</li>
+            <li>铜箔</li>
+            <li>铝箔</li>
+            <li>铜线(扁平)</li>
+            <li>铜线(圆)</li>
+            <li>铝线(扁平)</li>
+            <li>铝线(圆)</li>
+        </ul>
+
+    </div>
+    <div class="bodys">
+        <div class="item"  style="display: block;">  <!--硅钢片-->
+            <div class="body_heading">
+                <div class="pd">
+                    片宽：
+                    <input type="text" list="datalist1" id="ggp1" class="input">
+                    <!-- <datalist id="datalist1" >
+                        <option>20</option>
+                        <option>30</option>
+                        <option>40</option>
+                        <option>50</option>
+                        <option>60</option>
+                        <option>70</option>
+                        <option>80</option>
+                        <option>90</option>
+                        <option>100</option>
+                        <option>110</option>
+                        <option>120</option>
+                        <option>130</option>
+                        <option>140</option>
+                        <option>150</option>
+                        <option>160</option>
+                    </datalist> -->
+                    高度：
+                    <input type="text" list="datalist2" id="ggp2" class="input">
+                    <!-- <datalist id="datalist2" >
+                        <option>0.2</option>
+                        <option>0.23</option>
+                        <option>0.27</option>
+                        <option>0.3</option>
+                        <option>0.35</option>
+                        <option>0.5</option>
+                    </datalist> -->
+                    <input type="submit" value="查询" id="ggp" class="button">
+                </div>
+            </div>
+            <div class="body_content">
+                <p><b style="height: 50px">查询结果显示：</b></p>
+                    <iframe src="frame/guigangpian.html" width="100%" height=90%></iframe>
+            </div>
+        </div> 
+        <div class="item">       <!--铜箔-->
+            <div class="body_heading">
+                <div class="pd">
+                    厚度：
+                    <input type="text" list="datalist1" id="tb1" class="input">
+                    <!-- <datalist id="datalist1" >
+                        <option>20</option>
+                        <option>30</option>
+                        <option>40</option>
+                    </datalist> -->
+                    宽度：
+                    <input type="text" list="datalist2" id="tb2" class="input">
+                    <!-- <datalist id="datalist2" >
+                        <option>0.2</option>
+                        <option>0.23</option>
+                        <option>0.27</option>
+                        <option>0.3</option>
+                        <option>0.35</option>
+                        <option>0.5</option>
+                    </datalist> -->
+                    <input type="submit" value="查询" id="tb" class="button">
+                </div>
+            </div>
+            <div class="body_content">
+                <p><b style="height: 50px">查询结果显示：</b></p>
+                    <iframe src="frame/tongbo.html" width="100%" height=90%></iframe>
+            </div>
+        </div> 
+        <div class="item">         <!--铝箔-->
+            <div class="body_heading">
+                <div class="pd">
+                    厚度：
+                    <input type="text" list="datalist1" id="lb1" class="input">
+                    <!-- <datalist id="datalist1" >
+                        <option>20</option>
+                        <option>30</option>
+                        <option>40</option>
+                    </datalist> -->
+                    宽度：
+                    <input type="text" list="datalist2" id="lb2" class="input">
+                    <!-- <datalist id="datalist2" >
+                        <option>0.2</option>
+                        <option>0.23</option>
+                        <option>0.27</option>
+                        <option>0.3</option>
+                        <option>0.35</option>
+                        <option>0.5</option>
+                    </datalist> -->
+                    <input type="submit" value="查询" id="lb" class="button">
+                </div>
+            </div>
+            <div class="body_content">
+                <p><b style="height: 50px">查询结果显示：</b></p>
+                    <iframe src="frame/lvbo.html" width="100%" height=90%></iframe>
+            </div>
+        </div> 
+        <div class="item">        <!--铜线（扁平）-->
+            <div class="body_heading">
+                <div class="pd">
+                    长度：
+                    <input type="text" list="datalist1" id="btx1" class="input">
+                    <datalist id="datalist1" >
+                        <option>20</option>
+                        <option>30</option>
+                        <option>40</option>
+                    </datalist>
+                    宽度：
+                    <input type="text" list="datalist2" id="btx2" class="input">
+                    <datalist id="datalist2" >
+                        <option>0.2</option>
+                        <option>0.23</option>
+                        <option>0.27</option>
+                        <option>0.3</option>
+                        <option>0.35</option>
+                        <option>0.5</option>
+                    </datalist>
+                    <input type="submit" value="查询" id="btx" class="button">
+                </div>
+            </div>
+            <div class="body_content">
+                <p><b style="height: 50px">查询结果显示：</b></p>
+                    <iframe src="frame/biantongxian.html" width="100%" height=90%></iframe>
+            </div>
+        </div> 
+        <div class="item">          <!--铜线（圆）-->
+            <div class="body_heading">
+                <div class="pdy">
+                    Φ：
+                    <input type="text" list="datalist1" id="ytx1" class="input">
+                    <!-- <datalist id="datalist1" >
+                        <option>20</option>
+                        <option>30</option>
+                        <option>40</option>
+                    </datalist> -->
+                    <input type="submit" value="查询" id="ytx" class="button">
+                </div>
+            </div>
+            <div class="body_content">
+                <p><b style="height: 50px">查询结果显示：</b></p>
+                    <iframe src="frame/yuantongxian.html" width="100%" height=90%></iframe>
+            </div>
+        </div> 
+        <div class="item">             <!--铝线（扁平）-->
+            <div class="body_heading">
+                <div class="pd">
+                    厚度：
+                    <input type="text" list="datalist1" id="blx1" class="input">
+                    <!-- <datalist id="datalist1" >
+                        <option>20</option>
+                        <option>30</option>
+                        <option>40</option>
+                    </datalist> -->
+                    宽度：
+                    <input type="text" list="datalist2" id="blx2" class="input">
+                    <!-- <datalist id="datalist2" >
+                        <option>0.2</option>
+                        <option>0.23</option>
+                        <option>0.27</option>
+                        <option>0.3</option>
+                        <option>0.35</option>
+                        <option>0.5</option>
+                    </datalist> -->
+                    <input type="submit" value="查询" id="blx" class="button">
+                </div>
+            </div>
+            <div class="body_content">
+                <p><b style="height: 50px">查询结果显示：</b></p>
+                    <iframe src="frame/bianlvxian.html" width="100%" height=90%></iframe>
+            </div>
+        </div> 
+        <div class="item">         <!--铝线（圆）-->
+            <div class="body_heading">
+                <div class="pdy">
+                    Φ：
+                    <input type="text" list="datalist1" id="ylx1" class="input">
+                    <input type="submit" value="查询" id="ylx" class="button">
+                </div>
+            </div>
+            <div class="body_content">
+                <p><b style="height: 50px">查询结果显示：</b></p>
+                    <iframe src="frame/yuanlvxian.html" width="100%" height=90%></iframe>
+            </div>
+        </div> 
+    </div>
+    <div class="footing"></div>
+</div>
+
+
+<script>
+    var heading = document.querySelector('.heading');
+    var lis = heading.querySelectorAll('li');
+    var items = document.querySelectorAll('.item');
+    for(var i=0;i<lis.length;i++){
+        //开始给5个小li设置索引号
+        lis[i].setAttribute('index',i);
+        // 在导航栏，点击谁，谁的底色变红，其他的不变
+        lis[i].onclick = function(){
+            for(var j=0; j < lis.length;j++){
+                lis[j].className='';
+            }
+            this.className='current';
+            //下面显示内容模块
+            var index = this.getAttribute('index');
+
+            for(var k=0; k < items.length; k++){
+                items[k].style.display = 'none';
+            }      //无法获取未定义或空引用的属性“style”这是为什么
+            index=index/1;
+
+            items[index].style.display = 'block';
+        }
+
+    }
+
+
+    var trs = document.querySelector('table').querySelectorAll('tr');
+    for(var i=0;i<trs.length;i++){
+        trs[i].onmouseover = function(){
+            this.className='bg';
+        }
+        trs[i].onmouseout=function(){
+            this.className='';
+        }
+    }
+
+</script>
+</body>
+</html>
+
+
